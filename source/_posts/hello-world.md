@@ -1,38 +1,46 @@
 ---
-title: Hello World
+title: 版本管理基本操作
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+# Git命令流程
+### 1. 安装Git
+### 2 .配置Git用户信息
 
-## Quick Start
+```
+git config --global user.name "你的用户名"  
+git config --global user.email "你的邮箱地址"
+```
+### 3. 初始化Git仓库
+##### 初始化一个新的Git仓库。
 
-### Create a new post
+```
+1. cd 项目目录路径  
+2. git init
+```
+### 4. 添加文件到Git仓库
+##### 将项目文件添加到Git的暂存区（或称为暂存索引）。
 
-``` bash
-$ hexo new "My New Post"
+```
+git add 文件名  
+# 或者添加所有文件  
+git add .
+```
+### 5. 提交文件到Git仓库
+##### 将暂存区的更改提交到Git仓库中，并附上提交信息。
+
+```
+git commit -m "提交信息"
+```
+### 6. 查看提交历史
+##### 使用git log命令查看项目的提交历史。
+
+```
+git log
+```
+### 7. 标签
+##### 为特定的提交打上标签，以便于版本管理和发布
+
+```
+git tag -a v1.0 -m "Version 1.0"
+git push orgin --tags
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
